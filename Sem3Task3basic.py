@@ -22,11 +22,11 @@ while input('Добавить товар? да/нет ') == 'да':
     goods.append(options)
 print(goods)
 '''
-for good in goods:
-    my_dict = {'названия': options_name[good], 'цены': options_price[good],
-           'кол-во': options_amount[good]}
+for i in goods:
+    
+    my_dict = {'названия': options_name[i], 'цены': options_price[i],
+           'кол-во': options_amount[i]}
 print(my_dict)
 '''
-
 
 
