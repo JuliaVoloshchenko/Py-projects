@@ -11,22 +11,27 @@
 а значение — список значений-характеристик, например список названий товаров.
 '''
 goods = []
-while input('Добавить товар? да/нет ') == 'да':
-    number = int(input('Введите номер товара: '))
-    options = {}
-    options_name = input('Введите название товара: ')
-    options_price = input('Введите цену данного товара: ')
-    options_amount = input('Введите колличество товара: ')
-    options[options_name] = options_price, options_amount
-    goods.append(number)
-    goods.append(options)
+while True:
+    goods.append((input('Введите номер товара: '),
+                  {'Название': input('Введите название товара: '),
+                   'Цена': input('Введите цену данного товара: '),
+                   'Количество': input('Введите колличество товара: ')}))
+    q = input('Закончить ввод? да/нет: ')
+    if q == 'да':
+        break
 print(goods)
-'''
-for i in goods:
-    
-    my_dict = {'названия': options_name[i], 'цены': options_price[i],
-           'кол-во': options_amount[i]}
-print(my_dict)
-'''
+options_name = []
+options_price = []
+options_amount = []
+res_dict = {}
+
+for i in range(len(goods)):
+    options_name.append(goods[i][1]['Название'])
+    options_price.append(goods[i][1]['Цена'])
+    options_amount.append(goods[i][1]['Количество'])
+res_dict.update({'Названия': options_name, 'Цены': options_price,
+                 'Количество': options_amount})
+print(res_dict)
+
 
 
