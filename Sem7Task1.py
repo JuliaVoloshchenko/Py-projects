@@ -13,10 +13,10 @@ running (запуск). В рамках метода running реализова�
 '''
 import time
 class TrafficLight:
-    def __init__(self):
-        self.__color__ = 'green'
+    def __init__(self, color):
+        self.__color = color
 
-    def running(self):
+    def running(self, color):
         print('Red')
         time.sleep(7)
         print('Yellow')
@@ -26,5 +26,5 @@ class TrafficLight:
         return
 
 
-obj = TrafficLight
+obj = TrafficLight('green')
 obj.running(obj)

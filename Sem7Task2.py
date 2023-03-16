@@ -13,9 +13,9 @@ class Road:
     mass = 25
     thickness = 0.05
 
-    def __init__(self, _length, _width):
-        self._length = _length
-        self._width = _width
+    def __init__(self, length, width):
+        self._length = length
+        self._width = width
 
     def mass_calculation(self, mass, thickness):
         res = self._length * self._width * mass * thickness

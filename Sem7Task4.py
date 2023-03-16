@@ -29,7 +29,7 @@ class Matrix:
             for j in range(len(other.my_list[i])):
                 self.my_list[i][j] = self.my_list[i][j] + \
                                       other.my_list[i][j]
-        return Matrix.__str__(self)
+        return Matrix(self.my_list)
 
 
 m_1 = Matrix([[1, 0, 2], [4, 3, 1], [4, 1, 7], [-1, 1, -1], [3, 0, 1]])
