@@ -28,8 +28,11 @@ class Position(Worker):
     def get_total_income(self):
         return self._income['wage'] + self._income['bonus']
 
+    def __str__(self):
+        return 'Информация о сотрудниках'
 
 obj = Position('Сергей', 'Иванов', 'менеджер', 80, 30)
+print(obj)
 obj_1 = Position('Андрей', 'Кузнецов', 'продавец', 50, 20)
 print(obj.name, obj.surname, obj.position, obj._income)
 print(obj.get_full_name(), obj.get_total_income())
