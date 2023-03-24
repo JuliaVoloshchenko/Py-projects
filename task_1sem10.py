@@ -15,26 +15,26 @@
 --- '\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430' - набор кодовых точек
 --- используйте списки и циклы, не дублируйте функции
 """
-First_list = ['разработка', 'сокет', 'декоратор']
-Second_list = []
+first_list = ['разработка', 'сокет', 'декоратор']
+second_list = []
 
 
 def encode_to_unicode_escape(my_list):
     for i in range(len(my_list)):
         s = my_list[i].encode('unicode_escape').decode()
-        Second_list.append(s)
-    return Second_list
+        second_list.append(s)
+    return second_list
 
 
-def type_obsession(New_list):
-    for i in range(len(New_list)):
-        print(New_list[i])
-        print(type(New_list[i]))
-    return New_list
+def type_obsession(new_list):
+    for i in range(len(new_list)):
+        print(new_list[i])
+        print(type(new_list[i]))
+    return new_list
 
 
-print(First_list)
-Second_list = encode_to_unicode_escape(First_list)
-print(Second_list)
-type_obsession(First_list)
-type_obsession(Second_list)
+print(first_list)
+second_list = encode_to_unicode_escape(first_list)
+print(second_list)
+type_obsession(first_list)
+type_obsession(second_list)
